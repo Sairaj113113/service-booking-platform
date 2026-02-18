@@ -1,22 +1,21 @@
 # Service Booking Platform - Backend
 
-Production-ready Spring Boot 3.x backend project for a multi-city, multi-role service platform.
+Standardized Spring Boot 3.x project for a multi-city, multi-role service platform.
+
+## Project Structure
+This project follows the **Standard Maven Layout**:
+- `src/main/java`: Source code
+- `src/main/resources`: Configuration and static resources
+- `pom.xml`: Project Object Model (dependencies & build)
+- `Dockerfile`: Multi-stage build for production
 
 ## Technology Stack
 - **Java 17**
 - **Spring Boot 3.2.2**
-- **Spring Security** (JWT Authentication)
+- **Spring Security** (JWT)
 - **Spring Data JPA**
 - **PostgreSQL**
-- **Lombok**
-- **Maven**
-
-## Key Features
-- **JWT Auth**: Stateless authentication with custom filters.
-- **Role-Based Access**: 4 core roles (ADMIN, CUSTOMER, PROVIDER, STAFF).
-- **Location Module**: Management of Cities and service Areas.
-- **Exception Handling**: Global REST advice for consistent error responses.
-- **Cloud Ready**: Prepared for Render/Heroku/AWS with environment variables.
+- **Docker**
 
 ## Environment Variables
 - `DB_URL`: JDBC connection string
