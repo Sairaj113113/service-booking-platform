@@ -1,0 +1,5 @@
+{
+  "name": "Service Booking Platform - Backend",
+  "description": "Production-ready Spring Boot 3.x backend project for a multi-city service platform.",
+  "requestFramePermissions": []
+}

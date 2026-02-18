@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: service-booking-backend
+    env: java
+    buildCommand: ./mvnw clean install -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: booking-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromDatabase:
+          name: booking-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: booking-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+
+databases:
+  - name: booking-db
+    databaseName: platform_db
+    user: db_user
